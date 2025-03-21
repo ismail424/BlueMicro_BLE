@@ -35,4 +35,8 @@ void setupKeymap() {
             matrix[row][col].addActivation(_L0, Method::PRESS, layer0[row][col]);
         }
     }
+    
+    // Enable RGB LED
+    setupRGB();
+    updateRGBmode(RGB_MODE_PLAIN);
 }

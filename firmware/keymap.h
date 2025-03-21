@@ -22,6 +22,7 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 #include "hardware_variants.h"
 #include "keyboard_config.h"
 #include "advanced_keycodes.h"
+#include "LedRGB.h"
 #include "Key.h"
 #include <array>
 

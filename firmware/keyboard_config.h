@@ -23,9 +23,14 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 
 #define KEYBOARD_SIDE SINGLE
 
-#define DEVICE_NAME_M "SingleKey"
-#define DEVICE_MODEL "SingleKey_V1"
-#define MANUFACTURER_NAME "Custom"
+#define DEVICE_NAME_M "Interpreto"
+#define DEVICE_MODEL "Interpreto_V1"
+#define MANUFACTURER_NAME "Interpreto"
+
+#define BACKLIGHT_PWM_ON 1
+#define RGBLIGHT_ANIMATIONS 1
+#define RGB_BRIGHTNESS 150
+#define RGB_MODE_PLAIN 1
 
 #define KEYMAP( \
     k00 \
