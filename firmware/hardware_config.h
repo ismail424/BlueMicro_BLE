@@ -27,18 +27,18 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 #define MATRIX_COLS 1
 
 // Your unusual pin configuration
-#define MATRIX_ROW_PINS { 20 }  // P0.20 (pin 6)
-#define MATRIX_COL_PINS { 45 }  // P1.13 (pin 16)
+#define MATRIX_ROW_PINS { 45 }  // P0.20 (pin 6)
+#define MATRIX_COL_PINS { 20 }  // P1.13 (pin 16)
+
 
 // Pin configuration for the WS2812B LED
 #define WS2812B_LED_PIN 6
 #define WS2812B_LED_COUNT 1
-#define WS2812B_LED_ON 1
+#define WS2812B_LED_ON 1 
 
 #define UNUSED_PINS {}
-#define DIODE_DIRECTION COL2ROW
 #define BATTERY_TYPE BATT_LIPO
-#define VBAT_PIN  31
+
 #define VCC_PIN 12
 #define VCC_POLARITY_ON 1
 

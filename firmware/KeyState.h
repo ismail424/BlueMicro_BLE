@@ -25,6 +25,7 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 
 #include "keyboard_config.h"
 #include "firmware_config.h"
+#include "LedRGB.h"
 
 
 

@@ -27,28 +27,21 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 #include "hid_keycodes.h"
 #include "advanced_keycodes.h"
 
-#ifdef ARDUINO_NRF52_ADAFRUIT
-            // do nothing since the Adafruit BSP doesn't have NeoPixel included
-#endif
-#ifdef ARDUINO_NRF52_COMMUNITY
-    #include <Adafruit_NeoPixel.h>
-    #define NEOPIXEL_AVAILABLE 1
-#endif
+#include <Adafruit_NeoPixel.h>
+#define NEOPIXEL_AVAILABLE 1
 
-  typedef struct rgb_color
-  {
-    unsigned char red, green, blue;
-    rgb_color() {};
-    rgb_color(uint8_t r, uint8_t g, uint8_t b) : red(r), green(g), blue(b) {};
-  } rgb_color;
+typedef struct rgb_color
+{
+  unsigned char red, green, blue;
+  rgb_color() {};
+  rgb_color(uint8_t r, uint8_t g, uint8_t b) : red(r), green(g), blue(b) {};
+} rgb_color;
 
-#ifdef ARDUINO_NRF52_COMMUNITY
-  extern Adafruit_NeoPixel pixels;
-#endif
+extern Adafruit_NeoPixel pixels;
 
 void setupRGB(void);
 void updateRGBmode(uint32_t mode);
 void updateRGB(unsigned long timesincelastkeypress);
 void suspendRGB(void);
-
+void setRGBLED(int ledIndex, uint8_t r, uint8_t g, uint8_t b);
 #endif

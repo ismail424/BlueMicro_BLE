@@ -24,19 +24,8 @@ std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
     ));
 
 void setupKeymap() {
-    // Single keymap for single key
-    uint32_t layer0[MATRIX_ROWS][MATRIX_COLS] = KEYMAP(
-        KC_F // You can change this to any key you want
-    );
- 
-    // Activate the key in the matrix
-    for (int row = 0; row < MATRIX_ROWS; ++row) {
-        for (int col = 0; col < MATRIX_COLS; ++col) {
-            matrix[row][col].addActivation(_L0, Method::PRESS, layer0[row][col]);
-        }
-    }
+    matrix[0][0].addActivation(_L0, Method::PRESS, KC_F);
     
     // Enable RGB LED
     setupRGB();
-    updateRGBmode(RGB_MODE_PLAIN);
 }

@@ -17,7 +17,7 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
-#include "KeyState.h"fffffffffffffffff
+#include "KeyState.h"
 
 KeyState::KeyState() {
     state = State::RELEASED;
@@ -53,6 +53,7 @@ void KeyState::press(unsigned long currentMillis)
     {
         state = State::MT_HELD;
         lastChanged = currentMillis;
+        setRGBLED(0, 0, 75, 255);  // Lighter blue when released
     }
     else if ((state == State::RELEASED || state == State::MT_TAPPED))
     {
@@ -68,6 +69,7 @@ void KeyState::press(unsigned long currentMillis)
         }
             
         lastChanged = currentMillis;
+        setRGBLED(0, 0, 75, 255);  // Lighter blue when released
     }
 }
 
@@ -82,17 +84,20 @@ void KeyState::clear(unsigned long currentMillis)
     {
         state = State::MT_TAPPED;
         lastChanged = currentMillis;
+        setRGBLED(0, 0, 128, 255);  // Lighter blue when released
     }
     else if (timeElapsed > DOUBLETAP_TIME_LIMIT && canDoubletap && checkDoubleTap) 
     {
         state = State::DT_TAPPED;
         lastChanged = currentMillis;
         canDoubletap = false;
+        setRGBLED(0, 0, 128, 255);  // Lighter blue when released
     }
     else if (state != State::RELEASED && timeElapsed > TIME_TILL_RELEASE)
     {
         state = State::RELEASED;
         lastChanged = currentMillis;
+        setRGBLED(0, 0, 128, 255);  // Lighter blue when released
     }
 }
 
