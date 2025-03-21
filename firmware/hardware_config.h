@@ -28,7 +28,7 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 
 // Your unusual pin configuration
 #define MATRIX_ROW_PINS { 20 }  // P0.20 (pin 6)
-#define MATRIX_COL_PINS { 45 }  // P1.13 (pin 16)
+#define MATRIX_COL_PINS { 13 }  // P1.13 (pin 16)
 
 #define UNUSED_PINS {}
 #define DIODE_DIRECTION COL2ROW
