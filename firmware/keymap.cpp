@@ -26,7 +26,7 @@ std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
 void setupKeymap() {
     // Single keymap for single key
     uint32_t layer0[MATRIX_ROWS][MATRIX_COLS] = KEYMAP(
-        KC_SPACE  // You can change this to any key you want
+        KC_F // You can change this to any key you want
     );
  
     // Activate the key in the matrix
